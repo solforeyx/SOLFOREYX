@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Solforeyx | Digital Agency Story, Mission & Values</title>
+<meta name="description" content="Learn about Solforeyx — a worldwide digital agency offering Shopify store development, web design, UI/UX, ads, transcription and translation services." />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://solforeyx.com/about.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="About Solforeyx | Digital Agency" />
+<meta property="og:description" content="Digital agency offering Shopify, web design, UI/UX, ads and technical services worldwide." />
+<meta property="og:url" content="https://solforeyx.com/about.html" />
+<meta property="og:image" content="https://solforeyx.com/images/solforeyx-og-default.jpg" />
+<link rel="icon" href="images/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{--bg:#0a0a0f;--bg-2:#12121a;--card:#16161f;--gold:#d4af37;--gold-light:#f3d58b;--gold-dark:#b8942a;--white:#f5f5f5;--muted:#8888a0;--border:#2a2a3a;--green:#25d366;--max:1180px;--radius:16px}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:"Inter",sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.gold{color:var(--gold)}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px}
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(10,10,15,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:"Manrope",sans-serif;font-size:24px;font-weight:800;letter-spacing:-1.5px}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:32px;align-items:center;list-style:none}
+.nav-links a{color:var(--muted);font-size:13px;font-weight:500;transition:.3s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#000!important;padding:10px 22px;border-radius:8px;font-weight:700;font-size:12px!important}
+.menu-btn{display:none;background:transparent;border:0;color:var(--white);font-size:26px;cursor:pointer}
+.page{padding:140px 0 80px;position:relative;z-index:1}
+.breadcrumb{color:var(--muted);font-size:13px;margin-bottom:32px}
+.breadcrumb a{color:var(--muted);transition:.2s}
+.breadcrumb a:hover{color:var(--gold)}
+h1{font-family:"Manrope",sans-serif;font-size:clamp(36px,5vw,60px);font-weight:800;letter-spacing:-2.5px;line-height:1.05;margin-bottom:20px}
+.lead{color:var(--muted);font-size:17px;max-width:720px;margin-bottom:50px}
+h2{font-family:"Manrope",sans-serif;font-size:28px;font-weight:800;letter-spacing:-1px;margin:48px 0 20px;color:var(--white)}
+h3{font-family:"Manrope",sans-serif;font-size:19px;font-weight:700;margin:28px 0 12px;color:var(--white)}
+p{color:#b8b8c8;margin-bottom:16px;font-size:15px}
+.section{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px 36px;margin-bottom:24px}
+.section p:last-child{margin-bottom:0}
+ul{list-style:none;padding:0}
+ul li{color:#b8b8c8;font-size:15px;padding-left:26px;position:relative;margin-bottom:10px}
+ul li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:800}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:40px 0}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px 20px;text-align:center}
+.stat .v{font-family:"Manrope",sans-serif;font-size:32px;font-weight:800;color:var(--gold);line-height:1}
+.stat .l{color:var(--muted);font-size:11px;margin-top:8px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.value{background:var(--bg-2);border:1px solid var(--border);border-radius:12px;padding:22px}
+.value h4{color:var(--gold);font-size:14px;margin-bottom:8px;font-family:"Manrope",sans-serif}
+.value p{font-size:13.5px;margin:0;color:var(--muted)}
+.cta-block{text-align:center;padding:56px 24px;background:linear-gradient(135deg,rgba(212,175,55,.08),var(--card));border:1px solid rgba(212,175,55,.2);border-radius:var(--radius);margin-top:50px}
+.cta-block h2{margin-top:0}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:10px;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#000;font-weight:700;font-size:14px;margin-top:16px;transition:.3s}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(212,175,55,.3)}
+footer{padding:50px 0 24px;border-top:1px solid var(--border);background:var(--bg);margin-top:60px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:40px}
+.footer-brand .logo{font-size:22px}
+.footer-brand p{color:var(--muted);max-width:340px;margin-top:14px;font-size:13px}
+.footer-social{display:flex;gap:16px;margin-top:20px}
+.footer-social a{color:var(--muted);font-size:20px;transition:.3s}
+.footer-social a:hover{color:var(--gold)}
+.footer-col h4{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:16px;font-weight:600}
+.footer-col a{display:block;color:var(--muted);font-size:13px;margin-bottom:10px;transition:.2s}
+.footer-col a:hover{color:var(--white)}
+.copyright{border-top:1px solid var(--border);padding-top:20px;color:var(--muted);font-size:11px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.whatsapp-fab{position:fixed;right:24px;bottom:24px;width:58px;height:58px;background:var(--green);border-radius:50%;z-index:1500;display:grid;place-items:center;box-shadow:0 8px 35px rgba(37,211,102,.3);transition:.35s}
+.whatsapp-fab:hover{transform:scale(1.08)}
+.whatsapp-fab svg{width:30px;height:30px;fill:white}
+@media(max-width:700px){.container{width:min(var(--max),calc(100% - 24px))}.nav-links{position:fixed;top:76px;left:16px;right:16px;display:none;flex-direction:column;align-items:stretch;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;gap:8px}.nav-links.active{display:flex}.nav-links a{padding:12px 14px;border-radius:6px}.menu-btn{display:block}.stats{grid-template-columns:1fr 1fr}.values{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.section{padding:24px 20px}h2{font-size:22px}.page{padding:110px 0 60px}.copyright{flex-direction:column;text-align:center}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AboutPage",
+  "name":"About Solforeyx",
+  "description":"Digital agency offering Shopify, web design, UI/UX, ads, transcription and translation services worldwide.",
+  "url":"https://solforeyx.com/about.html",
+  "publisher":{
+    "@type":"Organization",
+    "name":"Solforeyx",
+    "url":"https://solforeyx.com",
+    "logo":{"@type":"ImageObject","url":"https://solforeyx.com/images/solforeyx-logo.png"},
+    "sameAs":[
+      "https://www.facebook.com/share/14p2AzFZRgN/",
+      "https://instagram.com/solforeyx",
+      "https://tiktok.com/@solforeyx",
+      "https://x.com/solforeyx"
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="navbar">
+  <nav class="container nav-inner">
+    <a href="index.html" class="logo">Solfore<span>yx</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="https://wa.me/2349058322270" class="nav-cta" target="_blank" rel="noopener">Hire Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Home</a> / About</nav>
+    <h1>About <span class="gold">Solforeyx.</span></h1>
+    <p class="lead">An independent digital agency helping ambitious businesses worldwide build, launch and grow — with one partner handling design, development, marketing and technical work.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="v">50+</div><div class="l">Projects Delivered</div></div>
+      <div class="stat"><div class="v">32+</div><div class="l">Clients Served</div></div>
+      <div class="stat"><div class="v">98%</div><div class="l">Satisfaction Rate</div></div>
+      <div class="stat"><div class="v">24/7</div><div class="l">Support Available</div></div>
+    </div>
+
+    <h2>Our Story</h2>
+    <div class="section">
+      <p>Solforeyx was founded on a simple belief: too many businesses waste time and money juggling multiple freelancers, agencies and tools for work that should be handled by one trusted partner.</p>
+      <p>We started by building Shopify stores for small brands. Word spread. Then came the request for websites. Then UI/UX design. Then advertising. Then transcription, translation and technical services.</p>
+      <p>Today Solforeyx is a full-service digital agency serving businesses worldwide — from solo founders launching their first e-commerce store to established companies scaling their operations. Whatever the platform, whatever the goal, we handle the technical and creative work so you can focus on running your business.</p>
+    </div>
+
+    <h2>What We Do</h2>
+    <div class="section">
+      <p>We provide a complete digital growth system under one roof:</p>
+      <ul>
+        <li><strong>Shopify Store Development</strong> — conversion-focused e-commerce stores built for growth</li>
+        <li><strong>Website Design &amp; Coding</strong> — fast, modern, responsive business websites</li>
+        <li><strong>UI/UX Design</strong> — interfaces that look premium and convert visitors into customers</li>
+        <li><strong>Ads &amp; Digital Marketing</strong> — Meta, Google and TikTok campaigns with measurable ROI</li>
+        <li><strong>Transcription &amp; Translation</strong> — accurate transcripts and multilingual documents</li>
+        <li><strong>File Conversion</strong> — reliable document, image and file format conversion</li>
+        <li><strong>Affiliate Marketing</strong> — complete affiliate systems that generate passive income</li>
+      </ul>
+    </div>
+
+    <h2>How We Work</h2>
+    <div class="section">
+      <p>We believe in clarity, speed and communication. Every project follows a simple four-stage process:</p>
+      <h3>01 · Discovery</h3>
+      <p>We discuss your business, goals, audience and exactly what needs to be achieved. No jargon. No unnecessary paperwork.</p>
+      <h3>02 · Proposal</h3>
+      <p>You receive a clear scope, strategy and project direction — including timeline, deliverables and pricing — before any work begins.</p>
+      <h3>03 · Build</h3>
+      <p>Design, development, marketing or technical work is executed with regular updates. You always know where the project stands.</p>
+      <h3>04 · Launch &amp; Support</h3>
+      <p>Your completed project is delivered, tested and prepared for real-world use — with post-launch support included.</p>
+    </div>
+
+    <h2>Our Values</h2>
+    <div class="values">
+      <div class="value"><h4>TRANSPARENCY</h4><p>Clear pricing, honest timelines, no hidden fees.</p></div>
+      <div class="value"><h4>CRAFT</h4><p>Every project is built with care — no shortcuts.</p></div>
+      <div class="value"><h4>SPEED</h4><p>Fast delivery without sacrificing quality.</p></div>
+      <div class="value"><h4>RESULTS</h4><p>We measure success by your growth, not by deliverables.</p></div>
+    </div>
+
+    <h2>Who We Serve</h2>
+    <div class="section">
+      <p>Our clients include:</p>
+      <ul>
+        <li>E-commerce founders launching their first Shopify store</li>
+        <li>Established brands scaling their online presence</li>
+        <li>Service businesses needing a professional website</li>
+        <li>SaaS companies requiring UI/UX design</li>
+        <li>Content creators needing transcription and translation</li>
+        <li>Marketing teams running paid advertising campaigns</li>
+        <li>Entrepreneurs building affiliate income systems</li>
+      </ul>
+      <p style="margin-top:20px">No matter where you are in the world, we deliver — from Nigeria and the UK to the US, Canada, Australia and beyond.</p>
+    </div>
+
+    <div class="cta-block">
+      <h2>Ready to start your project?</h2>
+      <p style="max-width:520px;margin:0 auto">Tell us what you're trying to build. We'll tell you exactly how we can help — with a clear quote and timeline.</p>
+      <a href="https://wa.me/2349058322270" class="cta-btn" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Solfore<span>yx</span></a>
+        <p>Digital solutions for businesses that want to look better, work smarter and grow faster.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/14p2AzFZRgN/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/2349058322270" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://instagram.com/solforeyx" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://tiktok.com/@solforeyx" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://x.com/solforeyx" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <nav class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <nav class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </div>
+    <div class="copyright">
+      <span>&copy; <span id="year"></span> Solforeyx. All rights reserved.</span>
+      <span>Built for ambitious businesses.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/2349058322270" class="whatsapp-fab" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.78 11.78 0 0012.05 0C5.54 0 .24 5.3.24 11.81c0 2.08.54 4.11 1.57 5.9L.15 24l6.43-1.68a11.78 11.78 0 005.47 1.39h.01c6.51 0 11.81-5.3 11.81-11.81 0-3.15-1.23-6.11-3.35-8.42zM12.06 21.7h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.81 1 1.02-3.72-.23-.38a9.85 9.85 0 01-1.51-5.2C2.13 6.36 6.58 1.91 12.07 1.91c2.66 0 5.16 1.04 7.04 2.93a9.9 9.9 0 012.91 7.05c-.01 5.48-4.47 9.81-9.96 9.81zm5.43-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+</a>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuBtn.innerHTML = navLinks.classList.contains('active') ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+});
+</script>
+</body>
+</html>

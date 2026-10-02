@@ -1,0 +1,8 @@
+# Solforeyx robots.txt
+# https://solforeyx.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://solforeyx.com/sitemap.xml
