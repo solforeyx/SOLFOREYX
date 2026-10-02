@@ -75,8 +75,7 @@
       "sameAs": [
         "https://www.facebook.com/share/14p2AzFZRgN/",
         "https://instagram.com/solforeyx",
-        "https://tiktok.com/@solforeyx",
-        "https://x.com/solforeyx"
+        "https://tiktok.com/@solforeyx"
       ]
     }
     </script>
@@ -1107,7 +1106,6 @@
                         <a href="#" class="whatsapp-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                         <a href="https://instagram.com/solforeyx" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://tiktok.com/@solforeyx" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="https://x.com/solforeyx" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <nav class="footer-col" aria-label="Footer navigation">
@@ -1309,16 +1307,43 @@
             btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
         });
 
-        // ===== SMOOTH SCROLL =====
+        // ===== SMOOTH SCROLL (FIXED FOR ALL PAGES) =====
         document.querySelectorAll('a[href^="#"]:not(.whatsapp-link)').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const targetId = this.getAttribute('href');
                 if (!targetId || targetId === '#') return;
-                const target = document.querySelector(targetId);
-                if (!target) return;
+                
                 e.preventDefault();
-                const offset = 80;
-                window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+
+                const detailPage = document.getElementById('serviceDetailPage');
+                const isDetailPageActive = detailPage.classList.contains('active');
+
+                if (isDetailPageActive) {
+                    // Close detail page without scrolling to top
+                    if (galleryTimer) { clearInterval(galleryTimer); galleryTimer = null; }
+                    detailPage.classList.remove('active');
+                    document.getElementById('home').style.display = 'block';
+                    
+                    // Wait a tiny bit for the DOM to update, then scroll
+                    setTimeout(() => {
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            const offset = 80;
+                            window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+                        } else if (targetId === '#home') {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 50);
+                } else {
+                    // Normal scroll on home page
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        const offset = 80;
+                        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+                    } else if (targetId === '#home') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }
             });
         });
 
@@ -1675,7 +1700,7 @@
                 <span class="icon"><i class="fa-solid fa-lightbulb"></i></span>
                 <h3>Have a custom idea?</h3>
                 <p>Tell me what you're trying to build and I'll help you turn the idea into a practical digital solution.</p>
-                <a href="#contact" class="explore">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="explore whatsapp-link">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
                 <div class="glow-spot"></div>
             `;
             grid.appendChild(custom);
@@ -1711,9 +1736,9 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
             document.getElementById('breadcrumb').innerHTML = `
-                <a href="#" onclick="goHome(); return false;">Home</a>
+                <a href="#home">Home</a>
                 <span style="color:var(--muted);margin:0 6px;">/</span>
-                <a href="#services" onclick="goHome(); return false;">Services</a>
+                <a href="#services">Services</a>
                 <span style="color:var(--muted);margin:0 6px;">/</span>
                 <span style="color:var(--white);">${s.title}</span>
             `;
