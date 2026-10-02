@@ -1,52 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>https://solforeyx.com/</loc>
-    <lastmod>2026-10-02T11:10:29+00:00</lastmod>
-    <priority>1.0000</priority>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/solforeyx-og-default.jpg</image:loc>
-      <image:title>Solforeyx — Digital Agency</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/shopify-store-development-01.jpg</image:loc>
-      <image:title>Shopify Store Development by Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/shopify-store-development-02.jpg</image:loc>
-      <image:title>Shopify Store Design — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/meta-google-ads-marketing-01.jpg</image:loc>
-      <image:title>Meta Ads &amp; Google Ads Management — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/website-coding-development-01.jpg</image:loc>
-      <image:title>Website Design &amp; Coding — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/ui-ux-design-01.jpg</image:loc>
-      <image:title>UI UX Design — Solforeyx</image:title>
-    </image:image>
+       <loc>https://solforeyx.com/</loc>
+       <lastmod>2026-10-02T11:10:29+00:00</lastmod>
+       <priority>1.0000</priority>
   </url>
   <url>
-    <loc>https://solforeyx.com/ads.html</loc>
-    <lastmod>2026-10-02T11:10:29+00:00</lastmod>
-    <priority>0.8000</priority>
+       <loc>https://solforeyx.com/about.html</loc>
+       <lastmod>2026-10-02T11:10:29+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
   <url>
-    <loc>https://solforeyx.com/about.html</loc>
-    <lastmod>2026-10-02T11:10:29+00:00</lastmod>
-    <priority>0.8000</priority>
+       <loc>https://solforeyx.com/privacy-policy.html</loc>
+       <lastmod>2026-10-02T11:10:29+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
   <url>
-    <loc>https://solforeyx.com/privacy-policy.html</loc>
-    <lastmod>2026-10-02T11:10:29+00:00</lastmod>
-    <priority>0.8000</priority>
-  </url>
-  <url>
-    <loc>https://solforeyx.com/terms.html</loc>
-    <lastmod>2026-10-02T11:10:29+00:00</lastmod>
-    <priority>0.8000</priority>
+       <loc>https://solforeyx.com/terms.html</loc>
+       <lastmod>2026-10-02T11:10:29+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
 </urlset>
