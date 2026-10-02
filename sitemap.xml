@@ -2,9 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://solforeyx.com/</loc>
-    <lastmod>2026-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-02T11:10:29+00:00</lastmod>
+    <priority>1.0000</priority>
     <image:image>
       <image:loc>https://solforeyx.com/images/solforeyx-og-default.jpg</image:loc>
       <image:title>Solforeyx — Digital Agency</image:title>
@@ -18,96 +17,36 @@
       <image:title>Shopify Store Design — Solforeyx</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://solforeyx.com/images/shopify-store-development-03.jpg</image:loc>
-      <image:title>Shopify Storefront — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/shopify-store-development-04.jpg</image:loc>
-      <image:title>Shopify Product Page — Solforeyx</image:title>
-    </image:image>
-    <image:image>
       <image:loc>https://solforeyx.com/images/meta-google-ads-marketing-01.jpg</image:loc>
       <image:title>Meta Ads &amp; Google Ads Management — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/meta-google-ads-marketing-02.jpg</image:loc>
-      <image:title>Facebook Instagram Ads Campaign — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/meta-google-ads-marketing-03.jpg</image:loc>
-      <image:title>Digital Marketing Campaign — Solforeyx</image:title>
     </image:image>
     <image:image>
       <image:loc>https://solforeyx.com/images/website-coding-development-01.jpg</image:loc>
       <image:title>Website Design &amp; Coding — Solforeyx</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://solforeyx.com/images/website-coding-development-02.jpg</image:loc>
-      <image:title>Custom Web Development — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/website-coding-development-03.jpg</image:loc>
-      <image:title>Responsive Website Build — Solforeyx</image:title>
-    </image:image>
-    <image:image>
       <image:loc>https://solforeyx.com/images/ui-ux-design-01.jpg</image:loc>
       <image:title>UI UX Design — Solforeyx</image:title>
     </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/ui-ux-design-02.jpg</image:loc>
-      <image:title>User Interface Design — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/ui-ux-design-03.jpg</image:loc>
-      <image:title>Product Design — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/transcription-translation-01.jpg</image:loc>
-      <image:title>Audio Transcription Service — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/transcription-translation-02.jpg</image:loc>
-      <image:title>Translation Service — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/file-conversion-01.jpg</image:loc>
-      <image:title>File Conversion Service — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/affiliate-marketing-01.jpg</image:loc>
-      <image:title>Affiliate Marketing Service — Solforeyx</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://solforeyx.com/images/affiliate-marketing-02.jpg</image:loc>
-      <image:title>Affiliate Funnel Strategy — Solforeyx</image:title>
-    </image:image>
   </url>
-  
   <url>
     <loc>https://solforeyx.com/ads.html</loc>
-    <lastmod>2026-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-02T11:10:29+00:00</lastmod>
+    <priority>0.8000</priority>
   </url>
-  
   <url>
     <loc>https://solforeyx.com/about.html</loc>
-    <lastmod>2026-10-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-10-02T11:10:29+00:00</lastmod>
+    <priority>0.8000</priority>
   </url>
-  
   <url>
     <loc>https://solforeyx.com/privacy-policy.html</loc>
-    <lastmod>2026-10-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-10-02T11:10:29+00:00</lastmod>
+    <priority>0.8000</priority>
   </url>
-  
   <url>
     <loc>https://solforeyx.com/terms.html</loc>
-    <lastmod>2026-10-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-10-02T11:10:29+00:00</lastmod>
+    <priority>0.8000</priority>
   </url>
 </urlset>
