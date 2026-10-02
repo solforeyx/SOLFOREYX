@@ -292,7 +292,8 @@
             --shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             background: var(--bg); color: var(--white);
             font-family: "Inter", sans-serif; overflow-x: hidden;
@@ -365,7 +366,7 @@
         .logo:hover .logo-glow { opacity: 1; }
 
         .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
-        .nav-links a { color: var(--muted); font-size: 13px; font-weight: 500; transition: 0.3s; position: relative; letter-spacing: 0.3px; }
+        .nav-links a { color: var(--muted); font-size: 13px; font-weight: 500; transition: 0.3s; position: relative; letter-spacing: 0.3px; cursor: pointer; }
         .nav-links a::after { content: ""; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--gold); transition: 0.3s; }
         .nav-links a:hover { color: var(--white); }
         .nav-links a:hover::after { width: 100%; }
@@ -460,6 +461,7 @@
             max-width: 560px; width: 100%; margin: 0 auto;
             transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s;
             animation: flyerFloat 6s ease-in-out infinite;
+            cursor: zoom-in;
         }
         .hero-flyer:hover {
             transform: scale(1.02);
@@ -628,7 +630,7 @@
         .service-detail-page { display: none; padding: 110px 0 60px; background: var(--bg); }
         .service-detail-page.active { display: block; }
         .breadcrumb { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
-        .breadcrumb a { color: var(--muted); transition: 0.2s; }
+        .breadcrumb a { color: var(--muted); transition: 0.2s; cursor: pointer; }
         .breadcrumb a:hover { color: var(--gold); }
         .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
 
@@ -735,10 +737,10 @@
         .footer-brand .logo { font-size: 22px; }
         .footer-brand p { color: var(--muted); max-width: 340px; margin-top: 16px; font-size: 13.5px; line-height: 1.75; }
         .footer-social { display: flex; gap: 16px; margin-top: 22px; }
-        .footer-social a { color: var(--muted); font-size: 20px; transition: 0.3s; }
+        .footer-social a { color: var(--muted); font-size: 20px; transition: 0.3s; cursor: pointer; }
         .footer-social a:hover { color: var(--gold); transform: translateY(-3px); }
         .footer-col h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 1.8px; color: var(--muted); margin-bottom: 18px; font-weight: 700; }
-        .footer-col a { display: block; color: var(--muted); font-size: 13.5px; margin-bottom: 11px; transition: 0.2s; }
+        .footer-col a { display: block; color: var(--muted); font-size: 13.5px; margin-bottom: 11px; transition: 0.2s; cursor: pointer; }
         .footer-col a:hover { color: var(--white); transform: translateX(3px); }
         .copyright { border-top: 1px solid var(--border); padding-top: 22px; color: var(--muted); font-size: 11.5px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
         .copyright .legal-links { display: flex; gap: 20px; flex-wrap: wrap; }
@@ -841,7 +843,7 @@
     <!-- ===== NAVBAR ===== -->
     <header class="navbar" id="navbar" role="banner">
         <nav class="container nav-inner" aria-label="Main navigation">
-            <a href="#home" class="logo" aria-label="Solforeyx home">
+            <a href="javascript:void(0)" onclick="handleNavClick('#home')" class="logo" aria-label="Solforeyx home">
                 Solfore<span>yx</span>
                 <span class="logo-glow" aria-hidden="true"></span>
             </a>
@@ -849,11 +851,11 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
             <ul class="nav-links" id="navLinks" role="menubar">
-                <li role="none"><a href="#home" role="menuitem">Home</a></li>
-                <li role="none"><a href="#services" role="menuitem">Services</a></li>
-                <li role="none"><a href="#process" role="menuitem">Process</a></li>
+                <li role="none"><a href="javascript:void(0)" onclick="handleNavClick('#home')" role="menuitem">Home</a></li>
+                <li role="none"><a href="javascript:void(0)" onclick="handleNavClick('#services')" role="menuitem">Services</a></li>
+                <li role="none"><a href="javascript:void(0)" onclick="handleNavClick('#process')" role="menuitem">Process</a></li>
                 <li role="none"><a href="about.html" role="menuitem">About</a></li>
-                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                <li role="none"><a href="javascript:void(0)" onclick="handleNavClick('#contact')" role="menuitem">Contact</a></li>
                 <li role="none"><a href="#" class="nav-cta whatsapp-link" role="menuitem">Hire Me</a></li>
             </ul>
         </nav>
@@ -880,7 +882,7 @@
                         <a href="#" class="btn btn-gold whatsapp-link magnetic">
                             Hire Me Now <i class="fa-solid fa-arrow-right arrow"></i>
                         </a>
-                        <a href="#services" class="btn btn-outline magnetic">
+                        <a href="javascript:void(0)" onclick="handleNavClick('#services')" class="btn btn-outline magnetic">
                             View Services <i class="fa-solid fa-chevron-right arrow"></i>
                         </a>
                     </div>
@@ -888,7 +890,7 @@
 
                 <div class="hero-visual reveal-scale">
                     <div class="hero-orb-bg" aria-hidden="true"></div>
-                    <a href="#" class="hero-flyer whatsapp-link" aria-label="Chat with Solforeyx on WhatsApp">
+                    <a href="javascript:void(0)" class="hero-flyer" id="heroFlyer" aria-label="Preview Solforeyx Flyer">
                         <img
                             src="images/hero.jpg"
                             alt="Solforeyx — Shopify store development, web design, UI/UX and digital marketing agency flyer"
@@ -1070,7 +1072,13 @@
     <!-- ===== SERVICE DETAIL PAGE ===== -->
     <div class="service-detail-page" id="serviceDetailPage" role="dialog" aria-label="Service detail">
         <div class="container">
-            <nav class="breadcrumb" id="breadcrumb" aria-label="Breadcrumb"></nav>
+            <nav class="breadcrumb" id="breadcrumb" aria-label="Breadcrumb">
+                <a href="javascript:void(0)" onclick="goHomeWithScroll('#home')">Home</a>
+                <span style="color:var(--muted);margin:0 6px;">/</span>
+                <a href="javascript:void(0)" onclick="goHomeWithScroll('#services')">Services</a>
+                <span style="color:var(--muted);margin:0 6px;">/</span>
+                <span style="color:var(--white);" id="breadcrumbTitle"></span>
+            </nav>
             <div class="detail-grid">
                 <div class="detail-gallery">
                     <div class="main-img" id="detailMainImg"></div>
@@ -1083,7 +1091,7 @@
                     <div class="desc" id="detailDesc"></div>
                     <div class="detail-ctas">
                         <a href="#" class="btn btn-gold whatsapp-link magnetic" id="detailWhatsApp">Get Started</a>
-                        <a href="#contact" class="btn btn-outline magnetic">Book a Call</a>
+                        <a href="javascript:void(0)" onclick="goHomeWithScroll('#contact')" class="btn btn-outline magnetic">Book a Call</a>
                     </div>
                     <div class="detail-sections" id="detailSections"></div>
                 </div>
@@ -1099,7 +1107,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#home" class="logo">Solfore<span>yx</span></a>
+                    <a href="javascript:void(0)" onclick="handleNavClick('#home')" class="logo">Solfore<span>yx</span></a>
                     <p>Digital solutions for businesses that want to look better, work smarter and grow faster.</p>
                     <div class="footer-social">
                         <a href="https://www.facebook.com/share/14p2AzFZRgN/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -1110,21 +1118,21 @@
                 </div>
                 <nav class="footer-col" aria-label="Footer navigation">
                     <h4>Navigation</h4>
-                    <a href="#home">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#process">Process</a>
+                    <a href="javascript:void(0)" onclick="handleNavClick('#home')">Home</a>
+                    <a href="javascript:void(0)" onclick="handleNavClick('#services')">Services</a>
+                    <a href="javascript:void(0)" onclick="handleNavClick('#process')">Process</a>
                     <a href="about.html">About</a>
-                    <a href="#contact">Contact</a>
+                    <a href="javascript:void(0)" onclick="handleNavClick('#contact')">Contact</a>
                 </nav>
                 <nav class="footer-col" aria-label="Footer services">
                     <h4>Services</h4>
-                    <a href="#shopify">Shopify Store Development</a>
-                    <a href="#ads">Ads &amp; Digital Marketing</a>
-                    <a href="#coding">Website &amp; Coding</a>
-                    <a href="#uiux">UI/UX Design</a>
-                    <a href="#transcription">Transcription &amp; Translation</a>
-                    <a href="#conversion">File Conversion</a>
-                    <a href="#affiliate">Affiliate Marketing</a>
+                    <a href="javascript:void(0)" onclick="handleNavClick('#shopify')">Shopify Store Development</a>
+                    <a href="javascript:void(0)" onclick="handleNavClick('#ads')">Ads &amp; Digital Marketing</a>
+                    <a href="javascript:void(0)" onclick="handleNavClick('#coding')">Website &amp; Coding</a>
+                    <a href="javascript:void(0)" onclick="handleNavClick('#uiux')">UI/UX Design</a>
+                    <a href="javascript:void(0)" onclick="handleNavClick('#transcription')">Transcription &amp; Translation</a>
+                    <a href="javascript:void(0)" onclick="handleNavClick('#conversion')">File Conversion</a>
+                    <a href="javascript:void(0)" onclick="handleNavClick('#affiliate')">Affiliate Marketing</a>
                 </nav>
                 <nav class="footer-col" aria-label="Footer legal">
                     <h4>Legal</h4>
@@ -1176,6 +1184,7 @@
                 el.rel = 'noopener noreferrer';
             });
         }
+        // Initial call for static links
         updateWhatsAppLinks();
 
         // ===== LIGHTBOX =====
@@ -1199,6 +1208,13 @@
         });
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeLightbox();
+        });
+
+        // ===== HERO IMAGE LIGHTBOX =====
+        document.getElementById('heroFlyer').addEventListener('click', function(e) {
+            e.preventDefault();
+            const img = this.querySelector('img');
+            openLightbox(img.src, img.alt);
         });
 
         // ===== GALLERY AUTOPLAY =====
@@ -1235,7 +1251,7 @@
         });
 
         document.addEventListener('mouseover', (e) => {
-            const t = e.target.closest('a, button, .service-card, .process-card, .stat-item, .btn');
+            const t = e.target.closest('a, button, .service-card, .process-card, .stat-item, .btn, .hero-flyer');
             ring.classList.toggle('hovered', !!t);
         });
 
@@ -1247,17 +1263,11 @@
 
         const menuBtn = document.getElementById('menuBtn');
         const navLinks = document.getElementById('navLinks');
+        
         menuBtn.addEventListener('click', () => {
             const active = navLinks.classList.toggle('active');
             menuBtn.setAttribute('aria-expanded', active);
             menuBtn.innerHTML = active ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
-        });
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                menuBtn.setAttribute('aria-expanded', 'false');
-                menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-            });
         });
 
         // ===== REVEAL =====
@@ -1307,45 +1317,50 @@
             btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
         });
 
-        // ===== SMOOTH SCROLL (FIXED FOR ALL PAGES) =====
-        document.querySelectorAll('a[href^="#"]:not(.whatsapp-link)').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                if (!targetId || targetId === '#') return;
-                
-                e.preventDefault();
+        // ===== NAVIGATION HANDLERS (ROBUST) =====
+        window.scrollToTarget = function(targetId) {
+            if (targetId === '#home') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
+            const target = document.querySelector(targetId);
+            if (target) {
+                const offset = 80;
+                window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+            }
+        };
 
-                const detailPage = document.getElementById('serviceDetailPage');
-                const isDetailPageActive = detailPage.classList.contains('active');
+        window.goHomeWithScroll = function(targetId) {
+            if (galleryTimer) { clearInterval(galleryTimer); galleryTimer = null; }
+            document.getElementById('serviceDetailPage').classList.remove('active');
+            document.getElementById('home').style.display = 'block';
+            setTimeout(() => {
+                window.scrollToTarget(targetId);
+            }, 150);
+        };
 
-                if (isDetailPageActive) {
-                    // Close detail page without scrolling to top
-                    if (galleryTimer) { clearInterval(galleryTimer); galleryTimer = null; }
-                    detailPage.classList.remove('active');
-                    document.getElementById('home').style.display = 'block';
-                    
-                    // Wait a tiny bit for the DOM to update, then scroll
-                    setTimeout(() => {
-                        const target = document.querySelector(targetId);
-                        if (target) {
-                            const offset = 80;
-                            window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
-                        } else if (targetId === '#home') {
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }
-                    }, 50);
-                } else {
-                    // Normal scroll on home page
-                    const target = document.querySelector(targetId);
-                    if (target) {
-                        const offset = 80;
-                        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
-                    } else if (targetId === '#home') {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }
-                }
-            });
-        });
+        window.handleNavClick = function(targetId) {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            }
+            const serviceKey = targetId.replace('#', '');
+            if (servicesData[serviceKey]) {
+                showServiceDetail(serviceKey);
+                return;
+            }
+            const detailPage = document.getElementById('serviceDetailPage');
+            const homePage = document.getElementById('home');
+            if (detailPage.classList.contains('active')) {
+                if (galleryTimer) { clearInterval(galleryTimer); galleryTimer = null; }
+                detailPage.classList.remove('active');
+                homePage.style.display = 'block';
+                setTimeout(() => window.scrollToTarget(targetId), 150);
+            } else {
+                window.scrollToTarget(targetId);
+            }
+        };
 
         // ===== SERVICES DATA =====
         const servicesData = {
@@ -1693,18 +1708,26 @@
             const grid = document.getElementById('serviceGrid');
             grid.innerHTML = '';
 
-            const custom = document.createElement('article');
-            custom.className = 'service-card custom-card reveal';
-            custom.innerHTML = `
-                <span class="num">START A PROJECT</span>
-                <span class="icon"><i class="fa-solid fa-lightbulb"></i></span>
-                <h3>Have a custom idea?</h3>
-                <p>Tell me what you're trying to build and I'll help you turn the idea into a practical digital solution.</p>
-                <a href="#" class="explore whatsapp-link">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
-                <div class="glow-spot"></div>
-            `;
-            grid.appendChild(custom);
+const custom = document.createElement('article');
+custom.className = 'service-card custom-card reveal';
+custom.innerHTML = `
+    <span class="num">START A PROJECT</span>
+    <span class="icon"><i class="fa-solid fa-lightbulb"></i></span>
+    <h3>Have a custom idea?</h3>
+    <p>Tell me what you're trying to build and I'll help you turn the idea into a practical digital solution.</p>
+    <a href="#" id="customIdeaBtn" class="explore">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
+    <div class="glow-spot"></div>
+`;
+grid.appendChild(custom);
 
+const customBtn = custom.querySelector('#customIdeaBtn');
+if (customBtn) {
+    customBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.open('https://wa.me/2349058322270?text=' + encodeURIComponent('Hello Solforeyx, I have a custom idea I want to discuss.'), '_blank');
+    });
+}
             serviceKeys.forEach((key, idx) => {
                 const s = servicesData[key];
                 const card = document.createElement('article');
@@ -1735,13 +1758,7 @@
             detailPage.classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            document.getElementById('breadcrumb').innerHTML = `
-                <a href="#home">Home</a>
-                <span style="color:var(--muted);margin:0 6px;">/</span>
-                <a href="#services">Services</a>
-                <span style="color:var(--muted);margin:0 6px;">/</span>
-                <span style="color:var(--white);">${s.title}</span>
-            `;
+            document.getElementById('breadcrumbTitle').textContent = s.title;
 
             const mainWrap = document.getElementById('detailMainImg');
             mainWrap.innerHTML = '';
