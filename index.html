@@ -1942,14 +1942,13 @@ if (customBtn) {
       var p = new URLSearchParams(location.search);
       key = p.get('service');
     }
-    if (key && typeof showServiceDetail === 'function' && window.servicesData && servicesData[key]) {
+    if (key && typeof showServiceDetail === 'function' && servicesData && servicesData[key]) {
       setTimeout(function(){ showServiceDetail(key); }, 250);
     }
   }
   window.addEventListener('load', openFromUrl);
   window.addEventListener('hashchange', openFromUrl);
 })();
-
         // ===== FORM =====
         document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
