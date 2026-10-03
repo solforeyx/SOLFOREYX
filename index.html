@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>Solforeyx | Shopify Store Development, Web Design & Digital Marketing Agency</title>
-    <meta name="description" content="Solforeyx is a worldwide digital agency offering Shopify store development, website design, UI/UX designs, Meta & Google Ads, transcription, translation, file conversion and affiliate marketing services." />
+    <meta name="description" content="Solforeyx is a worldwide digital agency offering Shopify store development, website design, UI/UX design, Meta & Google Ads, transcription, translation, file conversion and affiliate marketing services." />
     <meta name="keywords" content="Shopify store development, Shopify expert, website design, UI UX design, Meta Ads agency, Google Ads, digital marketing agency, transcription service, translation service, file conversion, affiliate marketing, Solforeyx" />
     <meta name="author" content="Solforeyx" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -791,6 +791,129 @@
             100% { border-radius: 50% 50% 40% 60%; transform: translate(10px,-10px) scale(1.05); }
         }
 
+        /* ========== EMAIL CAPTURE POPUP ========== */
+        .email-popup {
+            position: fixed; inset: 0; z-index: 10000;
+            display: none; align-items: center; justify-content: center;
+            padding: 24px;
+            animation: lbFade 0.25s ease;
+        }
+        .email-popup.open { display: flex; }
+        .email-popup-backdrop {
+            position: absolute; inset: 0;
+            background: rgba(5,5,10,0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .email-popup-box {
+            position: relative;
+            background: linear-gradient(180deg, #16161f 0%, #0f0f16 100%);
+            border: 1px solid rgba(212,175,55,0.25);
+            border-radius: 22px;
+            padding: 44px 32px 32px;
+            max-width: 440px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 100px rgba(212,175,55,0.12), inset 0 1px 0 rgba(255,255,255,0.05);
+            animation: popupIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        @keyframes popupIn {
+            0% { transform: scale(0.9) translateY(30px); opacity: 0; }
+            100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
+        .email-popup-icon {
+            width: 72px; height: 72px; margin: 0 auto 22px;
+            display: grid; place-items: center;
+            background: linear-gradient(135deg, rgba(212,175,55,0.25), rgba(212,175,55,0.06));
+            border: 1px solid rgba(212,175,55,0.35);
+            border-radius: 50%;
+            font-size: 30px; color: var(--gold);
+            box-shadow: 0 0 40px rgba(212,175,55,0.2);
+        }
+        .email-popup-box h3 {
+            font-family: "Manrope", sans-serif;
+            font-size: 26px; font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 12px; color: var(--white);
+            line-height: 1.2;
+        }
+        .email-popup-box h3 span { color: var(--gold); }
+        .email-popup-box p {
+            color: var(--muted); font-size: 14.5px;
+            line-height: 1.7; margin-bottom: 26px;
+        }
+        .email-popup-box p strong { color: var(--gold-light); font-weight: 600; }
+        .email-popup-box input {
+            width: 100%;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: 12px;
+            color: var(--white);
+            padding: 16px 18px;
+            outline: none;
+            transition: 0.25s;
+            font-size: 15px;
+            margin-bottom: 14px;
+            text-align: center;
+            font-family: "Inter", sans-serif;
+        }
+        .email-popup-box input::placeholder { color: #55556a; }
+        .email-popup-box input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(212,175,55,0.12);
+            background: #0d0d14;
+        }
+        .email-popup-box input.error {
+            border-color: #ff5566;
+            box-shadow: 0 0 0 4px rgba(255,85,102,0.15);
+            animation: shake 0.35s ease;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+        .email-popup-box button {
+            width: 100%;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+            color: #000; border: none; border-radius: 12px;
+            padding: 16px 24px;
+            font-weight: 700; font-size: 14.5px;
+            letter-spacing: 0.3px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            box-shadow: 0 10px 30px rgba(212,175,55,0.28), inset 0 1px 0 rgba(255,255,255,0.4);
+            font-family: "Inter", sans-serif;
+        }
+        .email-popup-box button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 45px rgba(212,175,55,0.45), inset 0 1px 0 rgba(255,255,255,0.5);
+        }
+        .email-popup-box button:active { transform: translateY(0); }
+        .email-popup-box button:disabled {
+            opacity: 0.6; cursor: wait; transform: none;
+        }
+        .popup-note {
+            display: flex; align-items: center; justify-content: center;
+            gap: 6px;
+            margin-top: 18px;
+            color: var(--muted); font-size: 11px;
+            letter-spacing: 0.2px;
+        }
+        .popup-note i { color: var(--gold); font-size: 10px; }
+        @media (max-width: 700px) {
+            .email-popup {
+                align-items: flex-start;
+                padding-top: 60px;
+                padding-bottom: 40px;
+                overflow-y: auto;
+            }
+            .email-popup-box { padding: 36px 24px 26px; }
+            .email-popup-box h3 { font-size: 22px; }
+            .email-popup-box p { font-size: 13.5px; }
+        }
+
         /* ========== RESPONSIVE ========== */
         @media (max-width: 1024px) {
             .services-grid, .process-grid, .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1180,9 +1303,44 @@
         <img id="lightboxImg" src="" alt="" />
     </div>
 
+    <!-- ===== EMAIL CAPTURE POPUP ===== -->
+    <div class="email-popup" id="emailPopup" role="dialog" aria-modal="true" aria-label="Email capture">
+        <div class="email-popup-backdrop"></div>
+        <div class="email-popup-box">
+            <div class="email-popup-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            <h3>One quick <span>thing</span>…</h3>
+            <p>Drop your email and I'll send you a <strong>free welcome pack</strong> + useful updates. Then we'll jump straight to WhatsApp.</p>
+            <input
+                type="email"
+                id="popupEmail"
+                placeholder="you@example.com"
+                autocomplete="email"
+                inputmode="email"
+                required
+            />
+            <button id="popupSubmit">
+                Continue to WhatsApp <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <span class="popup-note">
+                <i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime.
+            </span>
+        </div>
+    </div>
+
     <script>
         // ===== CONFIG =====
         const WHATSAPP_NUMBER = '2349058322270';
+
+        // =================================================================
+        // ===== BREVO EMAIL CAPTURE CONFIG =====
+        // 👇👇👇  REPLACE THE VALUE BELOW WITH YOUR REAL BREVO API KEY  👇👇👇
+        // Get it from: Brevo → SMTP & API → API Keys & MCP
+        // It starts with "xkeysib-"
+        // =================================================================
+        const BREVO_API_KEY = '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';
+        // =================================================================
+        const BREVO_LIST_ID = 5; // 👈 your list ID (SOLFOREYX - #5)
+        const STORAGE_KEY = 'solforeyx_visitor_email';
 
         // ===== GALLERY STATE =====
         let galleryTimer = null;
@@ -1203,6 +1361,125 @@
         }
         // Initial call for static links
         updateWhatsAppLinks();
+
+        // =============================================================
+        // ===== EMAIL CAPTURE + BREVO INTEGRATION =====
+        // =============================================================
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function openEmailPopup(waUrl) {
+            const popup = document.getElementById('emailPopup');
+            popup.dataset.waUrl = waUrl;
+            popup.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                const input = document.getElementById('popupEmail');
+                if (input) input.focus();
+            }, 200);
+        }
+
+        function closeEmailPopup() {
+            const popup = document.getElementById('emailPopup');
+            popup.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // Send email to Brevo (fire-and-forget so we don't lose the click gesture)
+        function sendToBrevo(email) {
+            if (!BREVO_API_KEY || BREVO_API_KEY === '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') {
+                console.warn('⚠️ Brevo API key not set. Emails will not be saved.');
+                return;
+            }
+            fetch('https://api.brevo.com/v3/contacts', {
+                method: 'POST',
+                headers: {
+                    'accept': 'application/json',
+                    'content-type': 'application/json',
+                    'api-key': BREVO_API_KEY
+                },
+                body: JSON.stringify({
+                    email: email,
+                    listIds: [BREVO_LIST_ID],
+                    updateEnabled: true
+                })
+            }).then(response => {
+                if (!response.ok && response.status !== 204 && response.status !== 400) {
+                    console.warn('Brevo response status:', response.status);
+                }
+            }).catch(err => {
+                console.warn('Brevo request failed:', err);
+            });
+        }
+
+        // Main handler when any WhatsApp link is clicked
+        function handleWhatsAppClick(waUrl) {
+            const savedEmail = localStorage.getItem(STORAGE_KEY);
+            if (savedEmail && isValidEmail(savedEmail)) {
+                // Already subscribed — open WhatsApp directly
+                window.open(waUrl, '_blank', 'noopener,noreferrer');
+                return;
+            }
+            // First time — show popup
+            openEmailPopup(waUrl);
+        }
+
+        // Event delegation: intercept clicks on any element with .whatsapp-link
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('.whatsapp-link');
+            if (!link) return;
+            e.preventDefault();
+            const url = link.href || whatsappUrl();
+            handleWhatsAppClick(url);
+        }, false);
+
+        // Popup submit logic
+        (function initEmailPopup() {
+            const popup = document.getElementById('emailPopup');
+            if (!popup) return;
+            const input = document.getElementById('popupEmail');
+            const submit = document.getElementById('popupSubmit');
+
+            function submitEmail() {
+                const email = (input.value || '').trim().toLowerCase();
+                if (!isValidEmail(email)) {
+                    input.classList.add('error');
+                    input.focus();
+                    return;
+                }
+                input.classList.remove('error');
+
+                const waUrl = popup.dataset.waUrl || whatsappUrl();
+
+                // Fire API call (don't await — preserves user gesture for window.open)
+                sendToBrevo(email);
+
+                // Save to localStorage so popup won't show again
+                try {
+                    localStorage.setItem(STORAGE_KEY, email);
+                } catch (err) {
+                    console.warn('localStorage not available:', err);
+                }
+
+                // Close popup
+                closeEmailPopup();
+
+                // Open WhatsApp
+                window.open(waUrl, '_blank', 'noopener,noreferrer');
+            }
+
+            submit.addEventListener('click', submitEmail);
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    submitEmail();
+                }
+            });
+            input.addEventListener('input', function() {
+                input.classList.remove('error');
+            });
+        })();
 
         // ===== LIGHTBOX =====
         function openLightbox(src, alt) {
@@ -1742,7 +2019,8 @@ if (customBtn) {
     customBtn.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        window.open('https://wa.me/2349058322270?text=' + encodeURIComponent('Hello Solforeyx, I have a custom idea I want to discuss.'), '_blank');
+        const url = 'https://wa.me/2349058322270?text=' + encodeURIComponent('Hello Solforeyx, I have a custom idea I want to discuss.');
+        handleWhatsAppClick(url);
     });
 }
             serviceKeys.forEach((key, idx) => {
