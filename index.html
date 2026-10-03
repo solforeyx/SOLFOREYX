@@ -17,14 +17,12 @@
     <meta name="revisit-after" content="7 days" />
     <link rel="canonical" href="https://solforeyx.com/" />
 
-    <!-- ===== FAVICON & APP ICONS ===== -->
     <link rel="icon" href="images/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
 
-    <!-- ===== OPEN GRAPH ===== -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Solforeyx" />
     <meta property="og:locale" content="en_US" />
@@ -38,7 +36,6 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Solforeyx — Digital agency for Shopify, websites, ads and design" />
 
-    <!-- ===== TWITTER / X ===== -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@solforeyx" />
     <meta name="twitter:creator" content="@solforeyx" />
@@ -53,7 +50,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <!-- ===== ORGANIZATION SCHEMA (Enhanced for Brand Recognition) ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -87,7 +83,6 @@
     }
     </script>
 
-    <!-- ===== WEBSITE SCHEMA ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -99,7 +94,6 @@
     }
     </script>
 
-    <!-- ===== SERVICE LIST SCHEMA ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -166,7 +160,6 @@
     }
     </script>
 
-    <!-- ===== MASTER FAQ SCHEMA ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -198,7 +191,6 @@
     }
     </script>
 
-    <!-- ===== SITE NAVIGATION SCHEMA (helps Google show section links) ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -277,7 +269,6 @@
     }
     </script>
 
-    <!-- ===== BREADCRUMB SCHEMA ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -323,7 +314,7 @@
         .container { width: min(var(--max), calc(100% - 40px)); margin: auto; }
         .gold { color: var(--gold); }
 
-        /* ========== SUBTLE GRAIN TEXTURE (premium feel) ========== */
+        /* ========== SUBTLE GRAIN TEXTURE ========== */
         body::after {
             content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 9997;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -469,7 +460,6 @@
             100% { transform: translate(-50%,-50%) scale(1.2); opacity: 1; }
         }
 
-        /* ===== HERO FLYER ===== */
         .hero-flyer {
             position: relative; z-index: 2; display: block;
             border-radius: 22px; overflow: hidden;
@@ -902,6 +892,67 @@
             letter-spacing: 0.2px;
         }
         .popup-note i { color: var(--gold); font-size: 10px; }
+
+        /* ===== POPUP STEP STATES ===== */
+        .popup-step { display: none; }
+        .popup-step.active { display: block; }
+
+        /* Step 2 — Loading */
+        .popup-loading {
+            padding: 30px 0 40px;
+        }
+        .popup-spinner {
+            width: 64px; height: 64px;
+            margin: 0 auto 22px;
+            border: 3px solid rgba(212,175,55,0.15);
+            border-top-color: var(--gold);
+            border-radius: 50%;
+            animation: spinLoad 0.9s linear infinite;
+        }
+        @keyframes spinLoad {
+            to { transform: rotate(360deg); }
+        }
+        .popup-loading p {
+            color: var(--gold-light);
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            margin-bottom: 6px;
+        }
+        .popup-loading small {
+            color: var(--muted);
+            font-size: 12.5px;
+            display: block;
+        }
+
+        /* Step 3 — Success (Continue to WhatsApp) */
+        .popup-success { padding: 10px 0 0; }
+        .popup-success-icon {
+            width: 72px; height: 72px;
+            margin: 0 auto 22px;
+            display: grid; place-items: center;
+            background: linear-gradient(135deg, rgba(37,211,102,0.22), rgba(37,211,102,0.06));
+            border: 1px solid rgba(37,211,102,0.45);
+            border-radius: 50%;
+            font-size: 32px; color: #25d366;
+            box-shadow: 0 0 40px rgba(37,211,102,0.25);
+            animation: popIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .popup-success h3 { margin-bottom: 8px; }
+        .popup-success p { margin-bottom: 22px; }
+        .popup-success button {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: #ffffff;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+        }
+        .popup-success button:hover {
+            box-shadow: 0 15px 45px rgba(37,211,102,0.5), inset 0 1px 0 rgba(255,255,255,0.35);
+        }
+
         @media (max-width: 700px) {
             .email-popup {
                 align-items: flex-start;
@@ -968,19 +1019,15 @@
 </head>
 <body>
 
-    <!-- ===== GLOW ORBS ===== -->
     <div class="glow-orb glow-orb-1" aria-hidden="true"></div>
     <div class="glow-orb glow-orb-2" aria-hidden="true"></div>
 
-    <!-- ===== BLOBS ===== -->
     <div class="blob-bg" style="width:300px;height:300px;top:10%;left:-5%;background:rgba(212,175,55,0.06);" aria-hidden="true"></div>
     <div class="blob-bg" style="width:400px;height:400px;bottom:10%;right:-8%;background:rgba(100,80,255,0.04);animation-delay:3s;" aria-hidden="true"></div>
 
-    <!-- ===== CURSOR ===== -->
     <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
     <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
-    <!-- ===== NAVBAR ===== -->
     <header class="navbar" id="navbar" role="banner">
         <nav class="container nav-inner" aria-label="Main navigation">
             <a href="javascript:void(0)" onclick="handleNavClick('#home')" class="logo" aria-label="Solforeyx home">
@@ -1001,10 +1048,8 @@
         </nav>
     </header>
 
-    <!-- ===== MAIN ===== -->
     <main id="home">
 
-        <!-- ===== HERO ===== -->
         <section class="hero" aria-label="Introduction">
             <div class="container hero-grid">
                 <div class="hero-content reveal">
@@ -1044,7 +1089,6 @@
             </div>
         </section>
 
-        <!-- ===== TRUST BAR ===== -->
         <section class="trust-bar" aria-label="Tools and platforms we work with">
             <div class="container trust-inner">
                 <span class="label">Trusted by businesses using</span>
@@ -1059,7 +1103,6 @@
             </div>
         </section>
 
-        <!-- ===== SERVICES ===== -->
         <section id="services" aria-label="Our services">
             <div class="container">
                 <div class="section-head reveal">
@@ -1071,7 +1114,6 @@
             </div>
         </section>
 
-        <!-- ===== STATS ===== -->
         <section class="stats-section" aria-label="Company statistics">
             <div class="container">
                 <div class="stats-grid" id="statsGrid">
@@ -1083,7 +1125,6 @@
             </div>
         </section>
 
-        <!-- ===== PROCESS ===== -->
         <section id="process" aria-label="Our process">
             <div class="container">
                 <div class="section-head reveal">
@@ -1100,7 +1141,6 @@
             </div>
         </section>
 
-        <!-- ===== ABOUT ===== -->
         <section id="about" aria-label="About Solforeyx">
             <div class="container about-grid">
                 <div class="about-visual reveal">
@@ -1148,7 +1188,6 @@
             </div>
         </section>
 
-        <!-- ===== CONTACT ===== -->
         <section class="contact-section" id="contact" aria-label="Contact us">
             <div class="container contact-grid">
                 <div class="contact-info reveal">
@@ -1189,7 +1228,6 @@
 
     </main>
 
-    <!-- ===== NOSCRIPT FALLBACK ===== -->
     <noscript>
         <section style="padding:60px 20px;background:#0a0a0f;color:#f5f5f5;font-family:Inter,sans-serif;">
             <div style="max-width:1180px;margin:auto;">
@@ -1209,7 +1247,6 @@
         </section>
     </noscript>
 
-    <!-- ===== SERVICE DETAIL PAGE ===== -->
     <div class="service-detail-page" id="serviceDetailPage" role="dialog" aria-label="Service detail">
         <div class="container">
             <nav class="breadcrumb" id="breadcrumb" aria-label="Breadcrumb">
@@ -1242,7 +1279,6 @@
         </div>
     </div>
 
-    <!-- ===== FOOTER ===== -->
     <footer role="contentinfo">
         <div class="container">
             <div class="footer-grid">
@@ -1292,38 +1328,58 @@
         </div>
     </footer>
 
-    <!-- ===== WHATSAPP FAB ===== -->
     <a href="#" class="whatsapp-fab whatsapp-link" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.78 11.78 0 0012.05 0C5.54 0 .24 5.3.24 11.81c0 2.08.54 4.11 1.57 5.9L.15 24l6.43-1.68a11.78 11.78 0 005.47 1.39h.01c6.51 0 11.81-5.3 11.81-11.81 0-3.15-1.23-6.11-3.35-8.42zM12.06 21.7h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.81 1 1.02-3.72-.23-.38a9.85 9.85 0 01-1.51-5.2C2.13 6.36 6.58 1.91 12.07 1.91c2.66 0 5.16 1.04 7.04 2.93a9.9 9.9 0 012.91 7.05c-.01 5.48-4.47 9.81-9.96 9.81zm5.43-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
     </a>
 
-    <!-- ===== LIGHTBOX PREVIEW ===== -->
     <div class="lightbox" id="lightbox" role="dialog" aria-label="Image preview" aria-modal="true">
         <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">✕</button>
         <img id="lightboxImg" src="" alt="" />
     </div>
 
-    <!-- ===== EMAIL CAPTURE POPUP ===== -->
+    <!-- ===== EMAIL CAPTURE POPUP (3-STEP FLOW) ===== -->
     <div class="email-popup" id="emailPopup" role="dialog" aria-modal="true" aria-label="Email capture">
         <div class="email-popup-backdrop"></div>
         <div class="email-popup-box">
-            <div class="email-popup-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
-            <h3>One quick <span>thing</span>…</h3>
-            <p>Drop your email and I'll send you a <strong>free welcome pack</strong> + useful updates. Then we'll jump straight to WhatsApp.</p>
-            <input
-                type="email"
-                id="popupEmail"
-                placeholder="you@example.com"
-                autocomplete="email"
-                inputmode="email"
-                required
-            />
-            <button id="popupSubmit">
-                Continue to WhatsApp <i class="fa-solid fa-arrow-right"></i>
-            </button>
-            <span class="popup-note">
-                <i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime.
-            </span>
+
+            <!-- STEP 1 — Enter email -->
+            <div class="popup-step active" id="popupStep1">
+                <div class="email-popup-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                <h3>One quick <span>thing</span>…</h3>
+                <p>Drop your email and I'll send you a <strong>free welcome pack</strong> + useful updates. Then we'll jump straight to WhatsApp.</p>
+                <input
+                    type="email"
+                    id="popupEmail"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    inputmode="email"
+                    required
+                />
+                <button id="popupSubmit">
+                    Continue <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <span class="popup-note">
+                    <i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime.
+                </span>
+            </div>
+
+            <!-- STEP 2 — Loading -->
+            <div class="popup-step popup-loading" id="popupStep2">
+                <div class="popup-spinner"></div>
+                <p>Just a moment…</p>
+                <small>Setting things up for you</small>
+            </div>
+
+            <!-- STEP 3 — Success + Continue to WhatsApp -->
+            <div class="popup-step popup-success" id="popupStep3">
+                <div class="popup-success-icon"><i class="fa-solid fa-check"></i></div>
+                <h3>You're <span>all set!</span></h3>
+                <p>We've saved your email. Tap below to continue the conversation on WhatsApp.</p>
+                <button id="popupContinue">
+                    <i class="fa-brands fa-whatsapp"></i> Continue to WhatsApp
+                </button>
+            </div>
+
         </div>
     </div>
 
@@ -1333,16 +1389,12 @@
 
         // =================================================================
         // ===== BREVO EMAIL CAPTURE CONFIG =====
-        // 👇👇👇  REPLACE THE VALUE BELOW WITH YOUR REAL BREVO API KEY  👇👇👇
-        // Get it from: Brevo → SMTP & API → API Keys & MCP
-        // It starts with "xkeysib-"
         // =================================================================
         const BREVO_API_KEY = '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';
-        // =================================================================
-        const BREVO_LIST_ID = 5; // 👈 your list ID (SOLFOREYX - #5)
+        const BREVO_LIST_ID = 5;
         const STORAGE_KEY = 'solforeyx_visitor_email';
+        // =================================================================
 
-        // ===== GALLERY STATE =====
         let galleryTimer = null;
         let currentGallery = [];
         let currentGalleryIndex = 0;
@@ -1359,14 +1411,19 @@
                 el.rel = 'noopener noreferrer';
             });
         }
-        // Initial call for static links
         updateWhatsAppLinks();
 
         // =============================================================
-        // ===== EMAIL CAPTURE + BREVO INTEGRATION =====
+        // ===== EMAIL CAPTURE + BREVO INTEGRATION (3-STEP FLOW) =====
         // =============================================================
         function isValidEmail(email) {
             return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function showPopupStep(stepNumber) {
+            document.querySelectorAll('.popup-step').forEach(el => el.classList.remove('active'));
+            const step = document.getElementById('popupStep' + stepNumber);
+            if (step) step.classList.add('active');
         }
 
         function openEmailPopup(waUrl) {
@@ -1374,10 +1431,14 @@
             popup.dataset.waUrl = waUrl;
             popup.classList.add('open');
             document.body.style.overflow = 'hidden';
-            setTimeout(() => {
-                const input = document.getElementById('popupEmail');
-                if (input) input.focus();
-            }, 200);
+
+            // Always start at Step 1 with empty input
+            const input = document.getElementById('popupEmail');
+            input.value = '';
+            input.classList.remove('error');
+            showPopupStep(1);
+
+            setTimeout(() => { if (input) input.focus(); }, 200);
         }
 
         function closeEmailPopup() {
@@ -1386,13 +1447,12 @@
             document.body.style.overflow = '';
         }
 
-        // Send email to Brevo (fire-and-forget so we don't lose the click gesture)
+        // Send to Brevo — returns a Promise so we can wait for it
         function sendToBrevo(email) {
-            if (!BREVO_API_KEY || BREVO_API_KEY === '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') {
-                console.warn('⚠️ Brevo API key not set. Emails will not be saved.');
-                return;
+            if (!BREVO_API_KEY || BREVO_API_KEY === 'PASTE_YOUR_BREVO_API_KEY_HERE') {
+                return Promise.resolve(false);
             }
-            fetch('https://api.brevo.com/v3/contacts', {
+            return fetch('https://api.brevo.com/v3/contacts', {
                 method: 'POST',
                 headers: {
                     'accept': 'application/json',
@@ -1404,24 +1464,24 @@
                     listIds: [BREVO_LIST_ID],
                     updateEnabled: true
                 })
-            }).then(response => {
-                if (!response.ok && response.status !== 204 && response.status !== 400) {
-                    console.warn('Brevo response status:', response.status);
+            })
+            .then(response => {
+                // 201 = created, 204 = updated, 400 = already exists
+                if (response.status === 201 || response.status === 204 || response.status === 400) {
+                    return true;
                 }
-            }).catch(err => {
-                console.warn('Brevo request failed:', err);
-            });
+                return false;
+            })
+            .catch(() => false);
         }
 
         // Main handler when any WhatsApp link is clicked
         function handleWhatsAppClick(waUrl) {
             const savedEmail = localStorage.getItem(STORAGE_KEY);
             if (savedEmail && isValidEmail(savedEmail)) {
-                // Already subscribed — open WhatsApp directly
                 window.open(waUrl, '_blank', 'noopener,noreferrer');
                 return;
             }
-            // First time — show popup
             openEmailPopup(waUrl);
         }
 
@@ -1434,13 +1494,16 @@
             handleWhatsAppClick(url);
         }, false);
 
-        // Popup submit logic
+        // Popup logic (3-step)
         (function initEmailPopup() {
             const popup = document.getElementById('emailPopup');
             if (!popup) return;
-            const input = document.getElementById('popupEmail');
-            const submit = document.getElementById('popupSubmit');
 
+            const input = document.getElementById('popupEmail');
+            const submitBtn = document.getElementById('popupSubmit');
+            const continueBtn = document.getElementById('popupContinue');
+
+            // Step 1 → Submit email
             function submitEmail() {
                 const email = (input.value || '').trim().toLowerCase();
                 if (!isValidEmail(email)) {
@@ -1450,26 +1513,24 @@
                 }
                 input.classList.remove('error');
 
-                const waUrl = popup.dataset.waUrl || whatsappUrl();
+                // Show loading step immediately
+                showPopupStep(2);
 
-                // Fire API call (don't await — preserves user gesture for window.open)
-                sendToBrevo(email);
+                // Wait for Brevo to finish, THEN show step 3
+                sendToBrevo(email).then(function () {
+                    // Save to localStorage (only after API call completes)
+                    try {
+                        localStorage.setItem(STORAGE_KEY, email);
+                    } catch (err) {
+                        console.warn('localStorage not available:', err);
+                    }
 
-                // Save to localStorage so popup won't show again
-                try {
-                    localStorage.setItem(STORAGE_KEY, email);
-                } catch (err) {
-                    console.warn('localStorage not available:', err);
-                }
-
-                // Close popup
-                closeEmailPopup();
-
-                // Open WhatsApp
-                window.open(waUrl, '_blank', 'noopener,noreferrer');
+                    // Show step 3 (Continue to WhatsApp)
+                    showPopupStep(3);
+                });
             }
 
-            submit.addEventListener('click', submitEmail);
+            submitBtn.addEventListener('click', submitEmail);
             input.addEventListener('keydown', function(e) {
                 if (e.key === 'Enter') {
                     e.preventDefault();
@@ -1478,6 +1539,13 @@
             });
             input.addEventListener('input', function() {
                 input.classList.remove('error');
+            });
+
+            // Step 3 → Continue to WhatsApp
+            continueBtn.addEventListener('click', function() {
+                const waUrl = popup.dataset.waUrl || whatsappUrl();
+                closeEmailPopup();
+                window.open(waUrl, '_blank', 'noopener,noreferrer');
             });
         })();
 
@@ -1504,14 +1572,12 @@
             if (e.key === 'Escape') closeLightbox();
         });
 
-        // ===== HERO IMAGE LIGHTBOX =====
         document.getElementById('heroFlyer').addEventListener('click', function(e) {
             e.preventDefault();
             const img = this.querySelector('img');
             openLightbox(img.src, img.alt);
         });
 
-        // ===== GALLERY AUTOPLAY =====
         function startGalleryTimer() {
             if (!currentGallery || currentGallery.length <= 1) return;
             galleryTimer = setInterval(() => {
@@ -1529,7 +1595,6 @@
             }, 4000);
         }
 
-        // ===== CURSOR =====
         const dot = document.getElementById('cursorDot');
         const ring = document.getElementById('cursorRing');
         let cursorX = 0, cursorY = 0, ringX = 0, ringY = 0;
@@ -1549,7 +1614,6 @@
             ring.classList.toggle('hovered', !!t);
         });
 
-        // ===== NAVBAR =====
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             navbar.classList.toggle('scrolled', window.scrollY > 30);
@@ -1564,7 +1628,6 @@
             menuBtn.innerHTML = active ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
         });
 
-        // ===== REVEAL =====
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1575,7 +1638,6 @@
         }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
         document.querySelectorAll('.reveal, .reveal-scale').forEach(el => revealObserver.observe(el));
 
-        // ===== COUNTERS =====
         const counters = document.querySelectorAll('.counter');
         let countersStarted = false;
         function startCounters() {
@@ -1600,7 +1662,6 @@
         const statsGrid = document.getElementById('statsGrid');
         if (statsGrid) statsObserver.observe(statsGrid);
 
-        // ===== MAGNETIC BUTTONS =====
         document.querySelectorAll('.magnetic').forEach(btn => {
             btn.addEventListener('mousemove', (e) => {
                 const rect = btn.getBoundingClientRect();
@@ -1611,7 +1672,6 @@
             btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
         });
 
-        // ===== NAVIGATION HANDLERS (ROBUST) =====
         window.scrollToTarget = function(targetId) {
             if (targetId === '#home') {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1656,7 +1716,6 @@
             }
         };
 
-        // ===== SERVICES DATA =====
         const servicesData = {
             shopify: {
                 icon: 'fa-solid fa-cart-shopping',
@@ -1997,32 +2056,31 @@
 
         const serviceKeys = Object.keys(servicesData);
 
-        // ===== RENDER SERVICE CARDS =====
         function renderServiceCards() {
             const grid = document.getElementById('serviceGrid');
             grid.innerHTML = '';
 
-const custom = document.createElement('article');
-custom.className = 'service-card custom-card reveal';
-custom.innerHTML = `
-    <span class="num">START A PROJECT</span>
-    <span class="icon"><i class="fa-solid fa-lightbulb"></i></span>
-    <h3>Have a custom idea?</h3>
-    <p>Tell me what you're trying to build and I'll help you turn the idea into a practical digital solution.</p>
-    <a href="#" id="customIdeaBtn" class="explore">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
-    <div class="glow-spot"></div>
-`;
-grid.appendChild(custom);
+            const custom = document.createElement('article');
+            custom.className = 'service-card custom-card reveal';
+            custom.innerHTML = `
+                <span class="num">START A PROJECT</span>
+                <span class="icon"><i class="fa-solid fa-lightbulb"></i></span>
+                <h3>Have a custom idea?</h3>
+                <p>Tell me what you're trying to build and I'll help you turn the idea into a practical digital solution.</p>
+                <a href="#" id="customIdeaBtn" class="explore">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="glow-spot"></div>
+            `;
+            grid.appendChild(custom);
 
-const customBtn = custom.querySelector('#customIdeaBtn');
-if (customBtn) {
-    customBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const url = 'https://wa.me/2349058322270?text=' + encodeURIComponent('Hello Solforeyx, I have a custom idea I want to discuss.');
-        handleWhatsAppClick(url);
-    });
-}
+            const customBtn = custom.querySelector('#customIdeaBtn');
+            if (customBtn) {
+                customBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const url = 'https://wa.me/2349058322270?text=' + encodeURIComponent('Hello Solforeyx, I have a custom idea I want to discuss.');
+                    handleWhatsAppClick(url);
+                });
+            }
             serviceKeys.forEach((key, idx) => {
                 const s = servicesData[key];
                 const card = document.createElement('article');
@@ -2041,7 +2099,6 @@ if (customBtn) {
             });
         }
 
-        // ===== SHOW SERVICE DETAIL =====
         function showServiceDetail(key) {
             const s = servicesData[key];
             if (!s) return;
@@ -2221,7 +2278,6 @@ if (customBtn) {
             });
         }
 
-        // ===== GO HOME =====
         window.goHome = function() {
             if (galleryTimer) { clearInterval(galleryTimer); galleryTimer = null; }
             document.getElementById('serviceDetailPage').classList.remove('active');
@@ -2229,22 +2285,21 @@ if (customBtn) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
 
-/* ===== Auto-open service from URL hash ===== */
-(function(){
-  function openFromUrl(){
-    var key = (location.hash || '').replace('#','').replace('/','');
-    if (!key) {
-      var p = new URLSearchParams(location.search);
-      key = p.get('service');
-    }
-    if (key && typeof showServiceDetail === 'function' && servicesData && servicesData[key]) {
-      setTimeout(function(){ showServiceDetail(key); }, 250);
-    }
-  }
-  window.addEventListener('load', openFromUrl);
-  window.addEventListener('hashchange', openFromUrl);
-})();
-        // ===== FORM =====
+        (function(){
+          function openFromUrl(){
+            var key = (location.hash || '').replace('#','').replace('/','');
+            if (!key) {
+              var p = new URLSearchParams(location.search);
+              key = p.get('service');
+            }
+            if (key && typeof showServiceDetail === 'function' && servicesData && servicesData[key]) {
+              setTimeout(function(){ showServiceDetail(key); }, 250);
+            }
+          }
+          window.addEventListener('load', openFromUrl);
+          window.addEventListener('hashchange', openFromUrl);
+        })();
+
         document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
